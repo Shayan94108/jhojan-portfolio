@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para solicitar información sobre mis servicios de diseño web.">
+    <title>Presupuesto | Jhojan Sebastian</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <!-- Cabecera y menu de navegacion -->
+    <header>
+        <p>Jhojan Sebastian</p>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li>
+                    <a href="presupuesto.html" class="activo">Presupuesto</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Solicita un presupuesto</h1>
+
+            <p>
+                Cuentame que pagina web necesitas.
+                Todos los campos del formulario son obligatorios.
+            </p>
+
+            <!-- Formulario de practica con validacion HTML5 -->
+            <form class="formulario" action="presupuesto.html" method="get">
+
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input class="campo" type="text" name="nombre" id="nombre"
+                            pattern="[\p{L}\p{M}]+(?:[ '’\-][\p{L}\p{M}]+)*"
+                            title="Escribe un nombre sin números. Puedes usar tildes, espacios, guiones y apóstrofos."
+                            required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input class="campo" type="email" name="email" id="email"
+                            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                            title="Escribe un correo completo, por ejemplo nombre@ejemplo.com."
+                            required>
+                </p>
+
+                <p>
+                    <label for="telefono">Teléfono de contacto:</label>
+                    <input class="campo" type="tel" name="telefono"
+                           id="telefono" pattern="[0-9]{9}"
+                           maxlength="9"
+                           title="Escribe un telefono de 9 cifras, sin espacios."
+                           required>
+                </p>
+
+                <p>
+                    <label for="informacion">Solicite más información:</label>
+                    <textarea class="campo" name="informacion"
+                              id="informacion" rows="6" cols="30"
+                              required></textarea>
+                </p>
+
+                <!-- La casilla debe marcarse para enviar el formulario -->
+                <p>
+                    <input type="checkbox" name="privacidad"
+                           id="privacidad" value="aceptada" required>
+
+                    <label for="privacidad">He leído y acepto la política de privacidad.</label>
+                    <a href="#politica-privacidad">Leer la política</a>
+                </p>
+
+                <input class="boton" type="submit" value="Enviar solicitud">
+
+            </form>
+        </section>
+
+        <!-- Informacion sobre el uso del formulario -->
+        <section id="politica-privacidad">
+            <h2>Politica de privacidad</h2>
+
+            <p>
+                Este sitio web es un proyecto de clase.
+                El formulario es una demostracion y no gestiona
+                solicitudes reales. Para probarlo, utiliza datos ficticios.
+            </p>
+        </section>
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <p>&copy; 2026 Su Alumno Favorito Jhojan Sebastian.</p>
+
+        <p>
+            Direccion:
+            12600 La Vall d’Uixo, Castellon.
+        </p>
+
+        <p>
+            <a href="mailto:shayan94108@gmail.com">
+                shayan94108@gmail.com
+            </a>
+        </p>
+
+        <!-- Enlaces a mis redes sociales -->
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/shayan94108">
+                <img src="../assets/images/facebook.png" width="960" height="960" alt="Mi Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/shayan94108/">
+                <img src="../assets/images/instagram.png" width="512" height="512" alt="Mi Instagram">
+            </a>
+        </div>
+
+        <p>
+            <strong>Aviso legal:</strong>
+            Este sitio web es un proyecto academico de
+            Jhojan Sebastian Alipour Rivera.
+            La direccion mostrada es ficticia y se utiliza
+            como ejemplo para el ejercicio.
+        </p>
+
+        <p>
+            <a href="presupuesto.html#politica-privacidad">
+                Politica de privacidad
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>
